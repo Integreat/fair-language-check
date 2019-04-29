@@ -16,7 +16,7 @@ $( document ).ready(function() {
     $.getJSON( "https://cms-test.integreat-app.de/wp-json/extensions/v3/sites", function( data ) {
         var options = "";
         $.each( data, function( key, site ) {
-            options = options.concat( "<option id='" + site.path + "'>" + site.name + "</option>" );
+            options = options.concat( "<option value='" + site.path + "'>" + site.name + "</option>" );
         });
         $('#cities').html(options);
     });

@@ -3,4 +3,4 @@
 Das Tool ist verfügbar auf https://fairlanguage.integreat-app.de
 
 # Lizenz
-Der Code ist unter einer MIT-Lizenz veröffentlicht. Bootstrap und jQuery unterliegen jedweils ihren eigenen Lizenzen.
+Der Code ist unter einer MIT-Lizenz veröffentlicht. Bootstrap und jQuery unterliegen jeweils ihren eigenen Lizenzen.
