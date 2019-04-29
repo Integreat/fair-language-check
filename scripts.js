@@ -35,7 +35,7 @@ function parse_xml( xml ) {
         var type = errors[error].querySelector('description').textContent;
         var precontext = errors[error].querySelector('precontext').textContent;
         var suggestions = Array.from(errors[error].querySelector('suggestions').children);
-        var options = ["a", "b"];
+        var options = [];
         for (let option in suggestions) {
             options.push( suggestions[option].textContent );
         }
