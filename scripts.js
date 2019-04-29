@@ -1,6 +1,6 @@
 
 $('#cities').on('change', function() {
-    $.getJSON( "https://cms-test.integreat-app.de/"+ this.value +"/de/wp-json/extensions/v3/pages", function( data ) {
+    $.getJSON( "https://cms-test.integreat-app.de"+ this.value +"de/wp-json/extensions/v3/pages", function( data ) {
 		var options = "";
         $.each( data, function( key, page ) {
             options = options.concat( "<option value='" + page.id + "'>" + page.title + "</option>" );
