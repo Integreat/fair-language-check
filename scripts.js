@@ -28,7 +28,8 @@ function parse_xml( xml ) {
     //console.log(element);
     var children = element.childNodes;
     //console.log(children);
-    var html = "<table class='table table-hover'><thead><tr><th>Typ</th><th>Wort</th><th>Kontext</th><th>Alterantiven</th></tr></thead><tbody>";
+    var html = "    <h2 class='text-center' style='width:100%; margin-top: 30px; margin-bottom: 30px;'>Ergebnis</h2>" +
+    "<table class='table table-hover'><thead><tr><th>Typ</th><th>Wort</th><th>Kontext</th><th>Alterantiven</th></tr></thead><tbody>";
     var errors = Array.from(children);
     for (let error in errors) {
         var word = errors[error].querySelector('string').textContent;
