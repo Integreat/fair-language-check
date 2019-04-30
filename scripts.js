@@ -28,7 +28,7 @@ function parse_xml( xml ) {
     //console.log(element);
     var children = element.childNodes;
     //console.log(children);
-    var html = "";
+    var html = "<table class='table table-hover'><thead><tr><th>Typ</th><th>Wort</th><th>Kontext</th><th>Alterantiven</th></tr></thead><tbody>";
     var errors = Array.from(children);
     for (let error in errors) {
         var word = errors[error].querySelector('string').textContent;
@@ -39,10 +39,12 @@ function parse_xml( xml ) {
         for (let option in suggestions) {
             options.push( suggestions[option].textContent );
         }
-        html = html + "<div><h2>" + word + "</h2>" + type + " &mdash; " +
-            "Kontext: " + precontext + "<br>Alternativen: " +
-            options.join(", ") + "</div>";
+        html = html + "<tr><td>" + type + "</td>" +
+                      "<td>" + word + "</td>" +
+                      "<td>" + precontext + "</td>" +
+                      "<td>" + options.join(", ") + "</td></tr>";
     }
+    html = html + "</tbody></table>";
     return html;
 }
 
